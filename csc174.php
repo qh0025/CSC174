@@ -88,14 +88,11 @@
     }
 
     //PRINT UPDATED TABLE
-     //$sql = "SHOW TABLES"; 
-     $sql2 = "SELECT * FROM CUSTOMER";  
-     $res = $pdo->query($sql2);
- 
-     while ($row = $res->fetch_assoc()) 
-     {
-         print_r($row);
-     }
+    $stmt = $pdo->query("SELECT * FROM CUSTOMER");
+    while ($row = $stmt->fetch()) {
+        echo $row['name']."<br />\n";
+    }
+    
    //Close the connection to the MySQL server 
     $pdo->close(); 
     
