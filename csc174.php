@@ -31,11 +31,11 @@
 
   
     //check for empty first...
-    //if(empty($_POST['firstname']))
-    //{
-        //echo 'You left first name blank!';
-        //exit();
-   // }
+    if(empty($_POST['firstname']))
+    {
+        echo 'You left first name blank!';
+        exit();
+    }
 
 
   
