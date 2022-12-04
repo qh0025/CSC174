@@ -62,9 +62,18 @@
     //}
 
     //PRINT UPDATED TABLE
-    
-    $result = $pdo->fetchAll();
-    print_r($result);
+    $result = $pdo -> fetchAll();
+
+    foreach( $result as $row )
+    {
+      print $row['cid']. "\t";
+      print $row['first']. "\t";
+      print $row['last']. "\t";
+      print $row['state']. "\t";
+      print $row['city']. "\t";
+      print $row['zip']. "\t";
+      print $row['street']. "\n";
+    }
     
 
    //Close the connection to the MySQL server 
