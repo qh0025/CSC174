@@ -73,6 +73,18 @@
     echo $row['zip'];
     echo $row['street'];
   }
+
+    $sql = 'SELECT * FROM CUSTOMER';
+    foreach ($pdo->query($sql) as $row) 
+    {
+      print $row['cid']. "\t";
+      print $row['first']. "\t";
+      print $row['last']. "\t";
+      print $row['state']. "\t";
+      print $row['city']. "\t";
+      print $row['zip']. "\t";
+      print $row['street']. "\n";
+    }
     
 
    //Close the connection to the MySQL server 
