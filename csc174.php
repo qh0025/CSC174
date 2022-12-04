@@ -62,7 +62,7 @@
     //}
 
     //PRINT UPDATED TABLE
-    $result = $pdo -> fetchAll();
+    $result = $dsn -> fetchAll();
 
     foreach( $result as $row )
     {
