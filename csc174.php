@@ -62,13 +62,19 @@
     //}
 
     //PRINT UPDATED TABLE
-    $result = $pdo->query("SHOW TABLES");
-
-    while ($row = $result->fetch(PDO::FETCH_NUM)) {
-    echo $row[0]."<br>";
-}
-
-
+    
+    $sql = "SELECT * FROM CUSTOMER";
+    $data = $sql->fetchAll(PDO::FETCH_ASSOC);
+    foreach($data as $row) 
+    {
+      print $row['cid']. "\t";
+      print $row['first']. "\t";
+      print $row['last']. "\t";
+      print $row['state']. "\t";
+      print $row['city']. "\t";
+      print $row['zip']. "\t";
+      print $row['street']. "\n";
+    }
     
 
    //Close the connection to the MySQL server 
