@@ -92,9 +92,10 @@
      $sql2 = "SELECT * from CUSTOMER";  
      $res = $mysqli->query($sql2);
  
-     while ($row = $res->fetch_assoc()) {
+     while ($row = $res->fetch_assoc()) 
+     {
          print_r($row);
-
+     }
    //Close the connection to the MySQL server 
     $pdo->close(); 
     
