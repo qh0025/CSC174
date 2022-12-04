@@ -88,8 +88,8 @@
     }
 
     //PRINT UPDATED TABLE
-    $stmt = $pdo->query("SELECT * FROM CUSTOMER");
-    while ($row = $stmt->fetch()) {
+    $data = $pdo->fetchAll(PDO::FETCH_ASSOC);
+    foreach($data as $row) {
       echo ($row['cid']);
       echo ($row['first']);
       echo ($row['last']);
