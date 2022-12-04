@@ -64,12 +64,6 @@
     }
 
 
-    //if(empty($_POST['password']))
-    //{
-       // echo 'You left password blank!';
-       // exit();
-   //}
-
   
     //retrieve form data into PHP variables...
     //Reference legal uid and pass to insert 
@@ -93,11 +87,13 @@
       echo 'Error entering entry'.$pdo->error.'<br>';
     }
 
-    //Assume anything after this is a legit uid/pass combo and grant login status
-    //session_start();
-    //$_SESSION['uid'] = $uid;
-    // header('Location: finallogstatus.php'); 
-
+    //PRINT UPDATED TABLE
+     //$sql = "SHOW TABLES"; 
+     $sql2 = "SELECT * from CUSTOMER";  
+     $res = $mysqli->query($sql2);
+ 
+     while ($row = $res->fetch_assoc()) {
+         print_r($row);
 
    //Close the connection to the MySQL server 
     $pdo->close(); 
