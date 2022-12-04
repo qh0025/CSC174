@@ -62,9 +62,8 @@
     //}
 
     //PRINT UPDATED TABLE
-    $result = $dsn -> fetchAll();
-
-    foreach( $result as $row )
+    $data = $pdo->fetchAll(PDO::FETCH_ASSOC);
+    foreach($data as $row) {
     {
       echo $row['cid']. "\t";
       echo $row['first']. "\t";
