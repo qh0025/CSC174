@@ -62,17 +62,7 @@
     //}
 
     //PRINT UPDATED TABLE
-    $sql = 'SELECT * FROM CUSTOMER';
-    foreach ($pdo->query($sql) as $row) 
-   {
-    echo $row['cid'];
-    echo $row['first'];
-    echo $row['last'];
-    echo $row['state'];
-    echo $row['city'];
-    echo $row['zip'];
-    echo $row['street'];
-  }
+    
 
     $sql = 'SELECT * FROM CUSTOMER';
     foreach ($pdo->query($sql) as $row) 
