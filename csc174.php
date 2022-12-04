@@ -90,9 +90,16 @@
     //PRINT UPDATED TABLE
     $stmt = $pdo->query("SELECT * FROM CUSTOMER");
     while ($row = $stmt->fetch()) {
-        echo $row['name']."<br />\n";
+      echo ($row['cid']);
+      echo ($row['first']);
+      echo ($row['last']);
+      echo ($row['state']);
+      echo ($row['city']);
+      echo ($row['zip']);
+      echo ($row['street']);
+
     }
-    
+
    //Close the connection to the MySQL server 
     $pdo->close(); 
     
