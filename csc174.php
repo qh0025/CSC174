@@ -89,8 +89,8 @@
 
     //PRINT UPDATED TABLE
      //$sql = "SHOW TABLES"; 
-     $sql2 = "SELECT * from CUSTOMER";  
-     $res = $mysqli->query($sql2);
+     $sql2 = "SELECT * FROM CUSTOMER";  
+     $res = $pdo->query($sql2);
  
      while ($row = $res->fetch_assoc()) 
      {
