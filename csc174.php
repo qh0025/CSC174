@@ -66,13 +66,13 @@
 
     foreach( $result as $row )
     {
-      print $row['cid']. "\t";
-      print $row['first']. "\t";
-      print $row['last']. "\t";
-      print $row['state']. "\t";
-      print $row['city']. "\t";
-      print $row['zip']. "\t";
-      print $row['street']. "\n";
+      echo $row['cid']. "\t";
+      echo $row['first']. "\t";
+      echo $row['last']. "\t";
+      echo $row['state']. "\t";
+      echo $row['city']. "\t";
+      echo $row['zip']. "\t";
+      echo $row['street']. "\n";
     }
     
 
