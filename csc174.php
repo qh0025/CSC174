@@ -62,12 +62,13 @@
     //}
 
     //PRINT UPDATED TABLE
-    
+    $result = $pdo->query("SHOW TABLES");
 
-foreach ($db->query('SELECT*') as $row)
-{
- print "<p>$row[0]</p>\n\n";
+    while ($row = $result->fetch(PDO::FETCH_NUM)) {
+    echo $row[0]."<br>";
 }
+
+
     
 
    //Close the connection to the MySQL server 
