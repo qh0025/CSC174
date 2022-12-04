@@ -90,13 +90,13 @@
     //PRINT UPDATED TABLE
     $data = $pdo->fetchAll(PDO::FETCH_ASSOC);
     foreach($data as $row) {
-      echo ($row['cid']);
-      echo ($row['first']);
-      echo ($row['last']);
-      echo ($row['state']);
-      echo ($row['city']);
-      echo ($row['zip']);
-      echo ($row['street']);
+      echo $row['cid'];
+      echo $row['first'];
+      echo $row['last'];
+      echo $row['state'];
+      echo $row['city'];
+      echo $row['zip'];
+      echo $row['street'];
 
     }
 
