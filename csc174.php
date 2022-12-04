@@ -64,8 +64,8 @@
     //PRINT UPDATED TABLE
     
 
-    $sql = 'SELECT * FROM CUSTOMER';
-    foreach ($pdo->query($sql) as $row) 
+    $sql =  'SELECT * FROM CUSTOMER';
+    foreach  ($pdo->query($sql) as $row) 
     {
       print $row['cid']. "\t";
       print $row['first']. "\t";
