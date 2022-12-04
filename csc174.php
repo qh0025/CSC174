@@ -29,39 +29,13 @@
   //Password: 16e062b8cc6601f501d1b62aee13c758540331c093d7074f424bc687b6bf5351
   //Database: d2kcc4it2iou00
 
-   //$mysqli = new mysqli($servername, $username, $password, $dbname);
-   
-   //if($db -> connect_errno)
-   //{
-   // echo 'Failed to connect to MySQL: '.$db -> connect_error;
-   // exit();
-   //}
-  // else
-   //{
-   // echo '';
-   //}
-
-   //Create Table -- Commented out but verified that it was created.
-
-    //$sql = 'CREATE TABLE Account(
-    //User VARCHAR(30),
-    //Pass VARCHAR(25))';
-
-    //if($mysqli->query($sql) == true)
-    //{
-    //echo "Table 'Account' created successfully <br>";
-    //}
-    //else
-    //{
-     //echo 'Error creating table: '.$mysqli->error.'<br>';
-    //}
-    
+  
     //check for empty first...
-    if(empty($_POST['firstname']))
-    {
-        echo 'You left first name blank!';
-        exit();
-    }
+    //if(empty($_POST['firstname']))
+    //{
+        //echo 'You left first name blank!';
+        //exit();
+   // }
 
 
   
@@ -69,36 +43,37 @@
     //Reference legal uid and pass to insert 
     //values in Database
 
-    $fname = $_POST['firstname'];
+   // $fname = $_POST['firstname'];
  
 
 
 
     //Store data into table
-    $sql = "INSERT INTO CUSTOMER (first)
-    VALUES ('$fname')";
+    //$sql = "INSERT INTO CUSTOMER (first)
+    //VALUES ('$fname')";
 
-    if($pdo->query($sql)==true)
-    {
-      echo "Entry entered succesfully<br>";
-    }
-    else 
-    {
-      echo 'Error entering entry'.$pdo->error.'<br>';
-    }
+   // if($pdo->query($sql)==true)
+   // {
+      //echo "Entry entered succesfully<br>";
+    //}
+    //else 
+    //{
+     // echo 'Error entering entry'.$pdo->error.'<br>';
+    //}
 
     //PRINT UPDATED TABLE
-    $data = $pdo->fetchAll(PDO::FETCH_ASSOC);
-    foreach($data as $row) {
-      echo $row['cid'];
-      echo $row['first'];
-      echo $row['last'];
-      echo $row['state'];
-      echo $row['city'];
-      echo $row['zip'];
-      echo $row['street'];
-
-    }
+    $sql = 'SELECT * FROM CUSTOMER';
+    foreach ($pdo->query($sql) as $row) 
+   {
+    echo $row['cid'];
+    echo $row['first'];
+    echo $row['last'];
+    echo $row['state'];
+    echo $row['city'];
+    echo $row['zip'];
+    echo $row['street'];
+  }
+    
 
    //Close the connection to the MySQL server 
     $pdo->close(); 
