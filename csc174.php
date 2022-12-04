@@ -63,18 +63,8 @@
 
     //PRINT UPDATED TABLE
     
-    $sql = "SELECT * FROM CUSTOMER";
-    $data = $sql->fetchAll(PDO::FETCH_ASSOC);
-    foreach($data as $row) 
-    {
-      print $row['cid']. "\t";
-      print $row['first']. "\t";
-      print $row['last']. "\t";
-      print $row['state']. "\t";
-      print $row['city']. "\t";
-      print $row['zip']. "\t";
-      print $row['street']. "\n";
-    }
+    $result = $pdo->fetchAll();
+    print_r($result);
     
 
    //Close the connection to the MySQL server 
